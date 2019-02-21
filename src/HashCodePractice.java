@@ -30,12 +30,16 @@ public final class HashCodePractice {
         final int mTotalTomatos;
     }
 
-    public boolean isValidSlice(int rowIdx1, int colIdx1, int rowIdx2, int colIdx2, int minMushroom, int minTomatos, final char[][] tastyPizza) {
-
-
-
+    public boolean isValidSlice(
+            final int rowIdx1,
+            final int colIdx1,
+            final int rowIdx2,
+            final int colIdx2,
+            final int minMushroom,
+            final int minTomatos,
+            final char[][] tastyPizza) {
+        
     }
-
 
     private static char[][] constructTastyPizza(final List<String> lines, int totalRows, int totalColumns) {
 
