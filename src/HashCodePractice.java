@@ -5,7 +5,37 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.IntStream;
 
-public final class main {
+public final class HashCodePractice {
+
+    public class TotalIngredients {
+
+        public TotalIngredients create(int totalMushrooms, int totalTomatos) {
+            return new TotalIngredients(totalMushrooms, totalTomatos);
+        }
+
+        public int getmTotalMushrooms() {
+            return mTotalMushrooms;
+        }
+
+        public int getmTotalTomatos() {
+            return mTotalTomatos;
+        }
+
+        private TotalIngredients(int totalMushrooms, int totalTomatos) {
+            mTotalMushrooms = totalMushrooms;
+            mTotalTomatos = totalTomatos;
+        }
+
+        final int mTotalMushrooms;
+        final int mTotalTomatos;
+    }
+
+    public boolean isValidSlice(int rowIdx1, int colIdx1, int rowIdx2, int colIdx2, int minMushroom, int minTomatos, final char[][] tastyPizza) {
+
+
+
+    }
+
 
     private static char[][] constructTastyPizza(final List<String> lines, int totalRows, int totalColumns) {
 
@@ -37,6 +67,7 @@ public final class main {
         final char[][] tastyPizza = constructTastyPizza(lines, totalRows, totalColumns);
 
         System.out.println("Eating pizza!");
-
     }
+
+
 }
