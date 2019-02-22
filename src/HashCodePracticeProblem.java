@@ -3,6 +3,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public final class HashCodePracticeProblem {
@@ -110,12 +111,8 @@ public final class HashCodePracticeProblem {
                 else
                     totalTomatos += 1;
 
-//                System.out.println(i + "," + j);
             }
         }
-
-//        System.out.println("Total Mashrooms: " + totalMashroom);
-//        System.out.println("Total Tomatos: " + totalTomatos);
 
         return totalMashroom >= minIngredients && totalTomatos >= minIngredients;
     }
@@ -184,14 +181,13 @@ public final class HashCodePracticeProblem {
                     for (int h = 0; h < maxColumn; h++) {
 
                         ++cnt;
-                        if (i > j || g > h || i == j || g == h )
+                        if (i > j || g > h || i == j || g == h)
                             continue;
 
                         allSlices.add(Slice.create(i, j, g, h));
 
-                        if(cnt >= 10000000)
+                        if (cnt >= 50000000)
                             return allSlices;
-//                      System.out.println(i + "," + j + "," + g + "," + h );
                     }
                 }
             }
@@ -214,6 +210,15 @@ public final class HashCodePracticeProblem {
                 final Optional<Slice> hasOverlap =
                         slicesSet.stream().filter(x -> doSlicesOverlap(x, slice)).findAny();
 
+                if (hasOverlap.isPresent()) {
+                    int shouldReplace = sRandom.nextInt(10) % 2;
+
+                    if (shouldReplace == 1) {
+                        slicesSet.remove(slice);
+                        slicesSet.add(hasOverlap.get());
+                    }
+                }
+
                 if (hasOverlap.isEmpty()) {
                     slicesSet.add(slice);
                 }
@@ -221,17 +226,16 @@ public final class HashCodePracticeProblem {
         });
 
         // final List<String> combinationList = combinations(pizzaLosToros);
-
         return slicesSet;
     }
 
+    final static Random sRandom = new Random();
 
     public static void main(String[] args) throws IOException {
 
-//       isValidMinSlice(2, 2, 4, 4, 3, saPizza);
-
+//      isValidMinSlice(2, 2, 4, 4, 3, saPizza);
         final List<String> lines =
-                Files.readAllLines(Paths.get("c_medium.in"), StandardCharsets.UTF_8);
+                Files.readAllLines(Paths.get("d_big.in"), StandardCharsets.UTF_8);
 
         final String[] initialValues = lines.get(0).split(" ");
         final int totalRows = Integer.parseInt(initialValues[0]);
@@ -246,12 +250,10 @@ public final class HashCodePracticeProblem {
 
         final List<Slice> res = selectValidSlices(tastyPizza, allSlices, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice);
 
-        System.out.println(res.size());
+        System.out.println(res.stream().distinct().collect(Collectors.toList()).size());
         res.stream().distinct().forEach(System.out::println);
 
-//        System.out.println("Eating pizza!");
-//        System.out.println(allSlices.size());
+//      System.out.println("Eating pizza!");
+//      System.out.println(allSlices.size());
     }
-
-
 }
