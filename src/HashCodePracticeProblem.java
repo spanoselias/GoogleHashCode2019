@@ -3,6 +3,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public final class HashCodePracticeProblem {
@@ -94,12 +95,6 @@ public final class HashCodePracticeProblem {
             final int minIngredients,
             final char[][] tastyPizza) {
 
-        /*
-        |1|2|3|10|
-        |4|5|6|11| ->  1, 2, 1, 3
-        |7|8|9|12|
-        */
-
         int totalMashroom = 0;
         int totalTomatos = 0;
         for (int i = rowIdx1; i < rowIdx2; i++) {
@@ -113,9 +108,6 @@ public final class HashCodePracticeProblem {
 //                System.out.println(i + "," + j);
             }
         }
-
-//        System.out.println("Total Mashrooms: " + totalMashroom);
-//        System.out.println("Total Tomatos: " + totalTomatos);
 
         return totalMashroom >= minIngredients && totalTomatos >= minIngredients;
     }
@@ -139,14 +131,7 @@ public final class HashCodePracticeProblem {
         return cnt <= maxCells;
     }
 
-    public static char[][] saPizza = new char[][]{
-            {'T', 'T', 'T', 'T', 'T'},
-            {'M', 'M', 'M', 'M', 'M'},
-            {'T', 'T', 'T', 'T', 'T'},
-            {'M', 'M', 'M', 'M', 'M'},
-    };
-
-    private static char[][] constructTastyPizza(final List<String> lines, final int totalRows, final int totalColumns) {
+    private static char[][] constructPizzaMatrix(final List<String> lines, final int totalRows, final int totalColumns) {
 
         char[][] tastyPizzaArr = new char[totalRows][totalColumns];
 
@@ -161,41 +146,43 @@ public final class HashCodePracticeProblem {
         return tastyPizzaArr;
     }
 
-    static boolean doSlicesOverlap(final Slice l1, final Slice l2) {
+    private static boolean doSlicesOverlap(final Slice l1, final Slice l2) {
         // If one rectangle is on left side of other
         if (l1.getCol2() < l2.getCol1() && l2.getCol2() > l2.getCol1()) {
             return false;
         }
 
-
         return true;
     }
 
 
-    private static List<Slice> constructBruteForceAllSlices(int maxRow, int maxColumn) {
+    private static List<Slice> constructAllSlicesFromPizzaMatrix(int maxRow, int maxColumn) {
 
         final List<Slice> allSlices = new ArrayList<>(100000);
 
-        int cnt = 0;
+        long cnt = 0;
 
         for (int i = 0; i < maxRow; i++) {
             for (int j = 0; j < maxRow; j++) {
                 for (int g = 0; g < maxColumn; g++) {
                     for (int h = 0; h < maxColumn; h++) {
 
-                        ++cnt;
-                        if (i > j || g > h || i == j || g == h )
+                        if (i > j || g > h || i == j || g == h)
                             continue;
 
-                        allSlices.add(Slice.create(i, j, g, h));
+                        ++cnt;
 
-                        if(cnt >= 10000000)
-                            return allSlices;
+//                        allSlices.add(Slice.create(i, j, g, h));
+
+//                        if (cnt >= 8000000)
+//                            return allSlices;
 //                      System.out.println(i + "," + j + "," + g + "," + h );
                     }
                 }
             }
         }
+
+        System.out.println(cnt);
 
         return allSlices;
     }
@@ -214,6 +201,15 @@ public final class HashCodePracticeProblem {
                 final Optional<Slice> hasOverlap =
                         slicesSet.stream().filter(x -> doSlicesOverlap(x, slice)).findAny();
 
+//                if (hasOverlap.isPresent()) {
+//                    int shouldReplace = sRandom.nextInt(10) % 2;
+//
+//                    if (shouldReplace == 1) {
+//                        slicesSet.remove(slice);
+//                        slicesSet.add(hasOverlap.get());
+//                    }
+//                }
+
                 if (hasOverlap.isEmpty()) {
                     slicesSet.add(slice);
                 }
@@ -221,18 +217,23 @@ public final class HashCodePracticeProblem {
         });
 
         // final List<String> combinationList = combinations(pizzaLosToros);
-
         return slicesSet;
     }
 
-
+    /*
+   public static char[][] saPizza = new char[][]{
+           {'T', 'T', 'T', 'T', 'T'},
+           {'M', 'M', 'M', 'M', 'M'},
+           {'T', 'T', 'T', 'T', 'T'},
+           {'M', 'M', 'M', 'M', 'M'},
+   };*/
     public static void main(String[] args) throws IOException {
 
-//       isValidMinSlice(2, 2, 4, 4, 3, saPizza);
-
+        // Read input file.
         final List<String> lines =
-                Files.readAllLines(Paths.get("c_medium.in"), StandardCharsets.UTF_8);
+                Files.readAllLines(Paths.get("d_big.in"), StandardCharsets.UTF_8);
 
+        // Read values
         final String[] initialValues = lines.get(0).split(" ");
         final int totalRows = Integer.parseInt(initialValues[0]);
         final int totalColumns = Integer.parseInt(initialValues[1]);
@@ -240,18 +241,21 @@ public final class HashCodePracticeProblem {
         final int maxTotalNoOfCellsOfSlice = Integer.parseInt(initialValues[3]);
 
         lines.remove(0);
-        final char[][] tastyPizza = constructTastyPizza(lines, totalRows, totalColumns);
+        final char[][] tastyPizza = constructPizzaMatrix(lines, totalRows, totalColumns);
 
-        final List<Slice> allSlices = constructBruteForceAllSlices(totalRows, totalColumns);
+        final List<Slice> allSlices = constructAllSlicesFromPizzaMatrix(totalRows, totalColumns);
+
+//        Collections.shuffle(allSlices);
 
         final List<Slice> res = selectValidSlices(tastyPizza, allSlices, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice);
 
-        System.out.println(res.size());
+        System.out.println(res.stream().distinct().collect(Collectors.toList()).size());
         res.stream().distinct().forEach(System.out::println);
 
-//        System.out.println("Eating pizza!");
-//        System.out.println(allSlices.size());
+//      System.out.println("Eating pizza!");
+
     }
 
+    private final static Random sRandom = new Random();
 
 }
