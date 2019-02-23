@@ -3,12 +3,9 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-
 public final class HashCodePracticeProblem {
-
 
     public static class Slice {
 
@@ -66,6 +63,30 @@ public final class HashCodePracticeProblem {
         private int mCol2;
     }
 
+    public static class MaxSliceValidation {
+
+        public static MaxSliceValidation create(boolean isMaxSliceValid, int totalCels) {
+            return new MaxSliceValidation(isMaxSliceValid, totalCels);
+        }
+
+        public boolean getIsMaxSliceValid() {
+            return mIsMaxSliceValid;
+        }
+
+        public int getTotalCells() {
+            return mTotalCells;
+        }
+
+        private MaxSliceValidation(boolean isMaxSliceValid, int totalCels) {
+            mIsMaxSliceValid = isMaxSliceValid;
+            mTotalCells = totalCels;
+        }
+
+        private final boolean mIsMaxSliceValid;
+        private final int mTotalCells;
+
+    }
+
     public static class TotalIngredients {
 
         public TotalIngredients create(int totalMushrooms, int totalTomatos) {
@@ -114,22 +135,30 @@ public final class HashCodePracticeProblem {
         return cntTotalMashroom >= minIngredients && cntTotalTomatos >= minIngredients;
     }
 
-    private static boolean isValidMaxSlice(
+    private static MaxSliceValidation isValidMaxSlice(
             final int rowIdx1,
             final int colIdx1,
             final int rowIdx2,
             final int colIdx2,
             final int maxCells) {
 
-        int cnt = 0;
-        for (int i = rowIdx1; i <= rowIdx2; i++) {
-            for (int j = colIdx1; j <= colIdx2; j++) {
+//        int cnt = 0;
+//        for (int i = rowIdx1; i <= rowIdx2; i++) {
+//            for (int j = colIdx1; j <= colIdx2; j++) {
+//
+//                cnt += 1;
+//            }
+//        }
 
-                cnt += 1;
-            }
-        }
+        final int fastCellTotalCnt = ((Math.abs(rowIdx1 - rowIdx2) + 1) * (Math.abs(colIdx1 - colIdx2) + 1));
+//        if (fastCellTotalCnt != cnt) {
+//            System.out.println("Error in total cell cnt.");
+//        }
 
-        return cnt <= maxCells;
+        return
+                MaxSliceValidation.create(
+                        fastCellTotalCnt <= maxCells,
+                        fastCellTotalCnt);
     }
 
     private static char[][] constructPizzaMatrix(final List<String> lines, final int totalRows, final int totalColumns) {
@@ -156,8 +185,7 @@ public final class HashCodePracticeProblem {
         return true;
     }
 
-
-    private static Set<Slice> constructAllSlicesFromPizzaMatrix(int maxRow, int maxColumn) {
+    private static Set<Slice> constructOptimalSlicesFromPizzaMatrix(int maxRow, int maxColumn, final int minIngredients, final int maxCells, char[][] tastyPizza) {
 
         final Set<Slice> allSlices = new HashSet<>(100000);
 
@@ -173,7 +201,46 @@ public final class HashCodePracticeProblem {
 
                         ++cnt;
 
+                        final Slice newSlice = Slice.create(i, j, g, h);
+
+                        final boolean isValidMaxSlice = isValidMaxSlice(i, g, j, h, maxCells).getIsMaxSliceValid();
+                        final boolean isValidMinIngrdients = isValidMinIngredientsSlice(i, g, j, h, minIngredients, tastyPizza);
+
+                        if (isValidMaxSlice && isValidMinIngrdients) {
+                            allSlices.add(newSlice);
+
+                        }
+//                       System.out.println(i + "," +  j + "," + g + "," + h);
+
+//                        if (cnt >= 8000000)
+//                            return allSlices;
+
+                    }
+                }
+            }
+        }
+
+        return allSlices;
+    }
+
+    private static Set<Slice> constructApproximationOptimalSlicesFromPizzaMatrix(int maxRow, int maxColumn) {
+
+        final Set<Slice> allSlices = new HashSet<>(100000);
+
+        long cnt = 0;
+
+        for (int i = 0; i < maxRow; i++) {
+            for (int j = 0; j < maxRow; j++) {
+                for (int g = 0; g < maxColumn; g++) {
+                    for (int h = 0; h < maxColumn; h++) {
+
+//                        if (i > j || g > h)
+//                            continue;
+
+                        ++cnt;
+
                         allSlices.add(Slice.create(i, j, g, h));
+//                        System.out.println(i + "," +  j + "," + g + "," + h);
 
 //                        if (cnt >= 8000000)
 //                            return allSlices;
@@ -192,22 +259,22 @@ public final class HashCodePracticeProblem {
 
         allSlices.forEach(slice -> {
 
-            final boolean isValidMaxSlice = isValidMaxSlice(slice.getRow1(), slice.getCol1(), slice.getRow2(), slice.getCol2(), maxCells);
+            final MaxSliceValidation isValidMaxSlice = isValidMaxSlice(slice.getRow1(), slice.getCol1(), slice.getRow2(), slice.getCol2(), maxCells);
             final boolean isValidMinIngredientsSlice = isValidMinIngredientsSlice(slice.getRow1(), slice.getCol1(), slice.getRow2(), slice.getCol2(), minIngredients, pizzaLosToros);
 
-            if (isValidMaxSlice && isValidMinIngredientsSlice) {
+            if (isValidMaxSlice.getIsMaxSliceValid() && isValidMinIngredientsSlice) {
 
                 final Optional<Slice> hasOverlap =
                         slicesSet.stream().filter(x -> doSlicesOverlap(x, slice)).findAny();
 
-//                if (hasOverlap.isPresent()) {
-//                    int shouldReplace = sRandom.nextInt(10) % 2;
-//
-//                    if (shouldReplace == 1) {
-//                        slicesSet.remove(slice);
-//                        slicesSet.add(hasOverlap.get());
-//                    }
-//                }
+                if (hasOverlap.isPresent()) {
+                    int shouldReplace = sRandom.nextInt(10) % 2;
+
+                    if (shouldReplace == 1) {
+                        slicesSet.remove(slice);
+                        slicesSet.add(hasOverlap.get());
+                    }
+                }
 
                 if (hasOverlap.isEmpty()) {
                     slicesSet.add(slice);
@@ -241,7 +308,7 @@ public final class HashCodePracticeProblem {
 
         // Read input file.
         final List<String> lines =
-                Files.readAllLines(Paths.get("b_small.in"), StandardCharsets.UTF_8);
+                Files.readAllLines(Paths.get("c_medium.in"), StandardCharsets.UTF_8);
 
         // Read values
         final String[] initialValues = lines.get(0).split(" ");
@@ -253,7 +320,7 @@ public final class HashCodePracticeProblem {
         lines.remove(0);
         final char[][] tastyPizza = constructPizzaMatrix(lines, totalRows, totalColumns);
 
-        final Set<Slice> allSlices = constructAllSlicesFromPizzaMatrix(totalRows, totalColumns);
+        final Set<Slice> allSlices = constructOptimalSlicesFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
 
 //      Collections.shuffle(allSlices);
 
