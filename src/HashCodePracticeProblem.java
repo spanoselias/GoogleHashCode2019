@@ -157,9 +157,9 @@ public final class HashCodePracticeProblem {
     }
 
 
-    private static List<Slice> constructAllSlicesFromPizzaMatrix(int maxRow, int maxColumn) {
+    private static Set<Slice> constructAllSlicesFromPizzaMatrix(int maxRow, int maxColumn) {
 
-        final List<Slice> allSlices = new ArrayList<>(100000);
+        final Set<Slice> allSlices = new HashSet<>(100000);
 
         long cnt = 0;
 
@@ -186,9 +186,9 @@ public final class HashCodePracticeProblem {
         return allSlices;
     }
 
-    private static List<Slice> selectValidSlices(final char[][] pizzaLosToros, final List<Slice> allSlices, final int minIngredients, final int maxCells) {
+    private static Set<Slice> selectValidSlices(final char[][] pizzaLosToros, final Set<Slice> allSlices, final int minIngredients, final int maxCells) {
 
-        final List<Slice> slicesSet = new ArrayList<>(10000);
+        final Set<Slice> slicesSet = new HashSet<>(10000);
 
         allSlices.forEach(slice -> {
 
@@ -219,6 +219,17 @@ public final class HashCodePracticeProblem {
         return slicesSet;
     }
 
+    private static void writeAnswerToTheFile(final Set<Slice> results) throws IOException {
+
+        final StringBuilder resultStr = new StringBuilder();
+        resultStr.append(results.size()).append(sNewLine);
+
+        results.forEach(x ->
+                resultStr.append(x.toString()).append(sNewLine));
+
+        Files.write(Paths.get("output.txt"), resultStr.toString().getBytes());
+    }
+
     /*
     public static char[][] saPizza = new char[][]{
             {'T', 'T', 'T', 'T', 'T'},
@@ -242,19 +253,19 @@ public final class HashCodePracticeProblem {
         lines.remove(0);
         final char[][] tastyPizza = constructPizzaMatrix(lines, totalRows, totalColumns);
 
-        final List<Slice> allSlices = constructAllSlicesFromPizzaMatrix(totalRows, totalColumns);
+        final Set<Slice> allSlices = constructAllSlicesFromPizzaMatrix(totalRows, totalColumns);
 
 //      Collections.shuffle(allSlices);
 
-        final List<Slice> res = selectValidSlices(tastyPizza, allSlices, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice);
+        final Set<Slice> res = selectValidSlices(tastyPizza, allSlices, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice);
 
-        System.out.println(res.stream().distinct().collect(Collectors.toList()).size());
-        res.stream().distinct().forEach(System.out::println);
+        writeAnswerToTheFile(res);
 
 //      System.out.println("Eating pizza!");
 
     }
 
     private final static Random sRandom = new Random();
+    private final static String sNewLine = "\n";
 
 }
