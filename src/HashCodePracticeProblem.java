@@ -6,7 +6,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+
 public final class HashCodePracticeProblem {
+
 
     public static class Slice {
 
@@ -95,21 +97,21 @@ public final class HashCodePracticeProblem {
             final int minIngredients,
             final char[][] tastyPizza) {
 
-        int totalMashroom = 0;
-        int totalTomatos = 0;
+        int cntTotalMashroom = 0;
+        int cntTotalTomatos = 0;
+
         for (int i = rowIdx1; i < rowIdx2; i++) {
             for (int j = colIdx1; j <= colIdx2; j++) {
 
                 if (tastyPizza[i][j] == 'M')
-                    totalMashroom += 1;
+                    cntTotalMashroom += 1;
                 else
-                    totalTomatos += 1;
+                    cntTotalTomatos += 1;
 
-//                System.out.println(i + "," + j);
             }
         }
 
-        return totalMashroom >= minIngredients && totalTomatos >= minIngredients;
+        return cntTotalMashroom >= minIngredients && cntTotalTomatos >= minIngredients;
     }
 
     private static boolean isValidMaxSlice(
@@ -117,8 +119,7 @@ public final class HashCodePracticeProblem {
             final int colIdx1,
             final int rowIdx2,
             final int colIdx2,
-            final int maxCells,
-            final char[][] tastyPizza) {
+            final int maxCells) {
 
         int cnt = 0;
         for (int i = rowIdx1; i <= rowIdx2; i++) {
@@ -167,22 +168,20 @@ public final class HashCodePracticeProblem {
                 for (int g = 0; g < maxColumn; g++) {
                     for (int h = 0; h < maxColumn; h++) {
 
-                        if (i > j || g > h || i == j || g == h)
+                        if (i > j || g > h)
                             continue;
 
                         ++cnt;
 
-//                        allSlices.add(Slice.create(i, j, g, h));
+                        allSlices.add(Slice.create(i, j, g, h));
 
 //                        if (cnt >= 8000000)
 //                            return allSlices;
-//                      System.out.println(i + "," + j + "," + g + "," + h );
+
                     }
                 }
             }
         }
-
-        System.out.println(cnt);
 
         return allSlices;
     }
@@ -193,7 +192,7 @@ public final class HashCodePracticeProblem {
 
         allSlices.forEach(slice -> {
 
-            final boolean isValidMaxSlice = isValidMaxSlice(slice.getRow1(), slice.getCol1(), slice.getRow2(), slice.getCol2(), maxCells, pizzaLosToros);
+            final boolean isValidMaxSlice = isValidMaxSlice(slice.getRow1(), slice.getCol1(), slice.getRow2(), slice.getCol2(), maxCells);
             final boolean isValidMinIngredientsSlice = isValidMinIngredientsSlice(slice.getRow1(), slice.getCol1(), slice.getRow2(), slice.getCol2(), minIngredients, pizzaLosToros);
 
             if (isValidMaxSlice && isValidMinIngredientsSlice) {
@@ -221,17 +220,17 @@ public final class HashCodePracticeProblem {
     }
 
     /*
-   public static char[][] saPizza = new char[][]{
-           {'T', 'T', 'T', 'T', 'T'},
-           {'M', 'M', 'M', 'M', 'M'},
-           {'T', 'T', 'T', 'T', 'T'},
-           {'M', 'M', 'M', 'M', 'M'},
-   };*/
+    public static char[][] saPizza = new char[][]{
+            {'T', 'T', 'T', 'T', 'T'},
+            {'M', 'M', 'M', 'M', 'M'},
+            {'T', 'T', 'T', 'T', 'T'},
+            {'M', 'M', 'M', 'M', 'M'},
+    };*/
     public static void main(String[] args) throws IOException {
 
         // Read input file.
         final List<String> lines =
-                Files.readAllLines(Paths.get("d_big.in"), StandardCharsets.UTF_8);
+                Files.readAllLines(Paths.get("b_small.in"), StandardCharsets.UTF_8);
 
         // Read values
         final String[] initialValues = lines.get(0).split(" ");
@@ -245,7 +244,7 @@ public final class HashCodePracticeProblem {
 
         final List<Slice> allSlices = constructAllSlicesFromPizzaMatrix(totalRows, totalColumns);
 
-//        Collections.shuffle(allSlices);
+//      Collections.shuffle(allSlices);
 
         final List<Slice> res = selectValidSlices(tastyPizza, allSlices, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice);
 
