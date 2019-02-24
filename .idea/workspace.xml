@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/HashCodePracticeProblem.java" line="125" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="32d8415b-24e6-45af-846e-2ac933b8de56" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PizzaObjects/MaxSliceValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PizzaObjects/Slice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PizzaObjects/TotalIngredients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/ChecksUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/ReadingWritingUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HashCodePracticeProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashCodePracticeProblem.java" afterDir="false" />
     </list>
@@ -20,33 +23,87 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HashCodePracticeProblem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="120" column="39" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
+            <state>
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#Slice#0;class#HashCodePracticeProblem#0" />
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#551#552#0" expanded="true" />
-                <element signature="e#583#584#0" expanded="true" />
-                <element signature="e#619#620#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
-                <element signature="e#687#688#0" expanded="true" />
-                <element signature="e#719#720#0" expanded="true" />
-                <element signature="e#755#756#0" expanded="true" />
-                <element signature="e#1377#1378#0" expanded="true" />
-                <element signature="e#1448#1449#0" expanded="true" />
-                <element signature="e#1502#1503#0" expanded="true" />
-                <element signature="e#1580#1581#0" expanded="true" />
-                <element signature="class#MaxSliceValidation#0;class#HashCodePracticeProblem#0" />
-                <element signature="class#TotalIngredients#0;class#HashCodePracticeProblem#0" />
-                <element signature="method#isValidMinIngredientsSlice#0;class#HashCodePracticeProblem#0" />
-                <element signature="method#isValidMaxSlice#0;class#HashCodePracticeProblem#0" />
-                <element signature="method#constructPizzaMatrix#0;class#HashCodePracticeProblem#0" />
-                <element signature="method#doSlicesOverlap#0;class#HashCodePracticeProblem#0" />
-                <element signature="method#approximateIndex#0;class#HashCodePracticeProblem#0" />
-                <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#HashCodePracticeProblem#0" />
-                <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#1;class#HashCodePracticeProblem#0" />
-                <element signature="method#writeAnswerToTheFile#0;class#HashCodePracticeProblem#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="254" column="10" selection-start-line="254" selection-start-column="10" selection-end-line="254" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
+                <element signature="method#constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
+                <element signature="method#constructColumnOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
+                <element signature="method#selectValidSlices#0;class#AlgorithmsUtils#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/ChecksUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="828">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#isValidMinIngredientsSlice#0;class#ChecksUtils#0" />
+                <element signature="method#doSlicesOverlap#0;class#ChecksUtils#0" />
+                <element signature="method#approximateIndex#0;class#ChecksUtils#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PizzaObjects/TotalIngredients.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#264#265#0" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#350#351#0" expanded="true" />
+                <element signature="e#394#395#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PizzaObjects/MaxSliceValidation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PizzaObjects/Slice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#201#202#0" expanded="true" />
+                <element signature="e#237#238#0" expanded="true" />
+                <element signature="e#269#270#0" expanded="true" />
+                <element signature="e#305#306#0" expanded="true" />
+                <element signature="e#337#338#0" expanded="true" />
+                <element signature="e#373#374#0" expanded="true" />
+                <element signature="e#405#406#0" expanded="true" />
+                <element signature="e#441#442#0" expanded="true" />
+                <element signature="e#1063#1064#0" expanded="true" />
+                <element signature="e#1134#1135#0" expanded="true" />
+                <element signature="e#1188#1189#0" expanded="true" />
+                <element signature="e#1266#1267#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,16 +118,16 @@
         <entry file="file://$PROJECT_DIR$/b_small.in">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+              <caret column="4" selection-start-column="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d_big.in">
+        <entry file="file://$PROJECT_DIR$/c_medium.in">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" selection-start-column="10" selection-end-column="11" />
+            <state relative-caret-position="22">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -115,6 +172,14 @@
         <option value="$PROJECT_DIR$/src/Objects.java" />
         <option value="$PROJECT_DIR$/src/Objects/Objects.java" />
         <option value="$PROJECT_DIR$/output.txt" />
+        <option value="$PROJECT_DIR$/src/Slice.java" />
+        <option value="$PROJECT_DIR$/src/PizzaObjects/MaxSliceValidation.java" />
+        <option value="$PROJECT_DIR$/src/PizzaObjects/TotalIngredients.java" />
+        <option value="$PROJECT_DIR$/src/Utils/CheckUtils.java" />
+        <option value="$PROJECT_DIR$/src/Utils/CheckesUtils.java" />
+        <option value="$PROJECT_DIR$/src/Utils/ChecksUtils.java" />
+        <option value="$PROJECT_DIR$/src/Utils/ReadingWritingUtils.java" />
+        <option value="$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java" />
         <option value="$PROJECT_DIR$/src/HashCodePracticeProblem.java" />
       </list>
     </option>
@@ -132,6 +197,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,17 +210,28 @@
               <item name="GoogleHashCode2019" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GoogleHashCode2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoogleHashCode2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PizzaObjects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoogleHashCode2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoogleHashCode2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551000000630" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551032549316" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -224,7 +301,8 @@
       <workItem from="1550849783221" duration="24248000" />
       <workItem from="1550936718924" duration="363000" />
       <workItem from="1550945154122" duration="9644000" />
-      <workItem from="1550992830525" duration="7060000" />
+      <workItem from="1550992830525" duration="8282000" />
+      <workItem from="1551031724664" duration="820000" />
     </task>
     <task id="LOCAL-00001" summary="1) Implement functions">
       <created>1550781850329</created>
@@ -310,17 +388,24 @@
       <option name="project" value="LOCAL" />
       <updated>1550999608646</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="1) Clean the code.">
+      <created>1551000012277</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1551000012277</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48271000" />
+    <option name="totallyTimeSpent" value="50313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1369936" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13059701" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -329,7 +414,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16359697" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26868907" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28602383" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -369,32 +454,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>142</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>401</line>
+          <line>34</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>155</line>
-          <properties />
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>361</line>
-          <properties />
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <condition expression="cnt == 6127" language="JAVA" />
           <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>220</line>
+          <line>16</line>
           <properties />
           <option name="timeStamp" value="120" />
         </line-breakpoint>
@@ -524,13 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/b_small.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/c_medium.in">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -538,38 +598,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/b_small.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/output.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashCodePracticeProblem.java">
+    <entry file="file://$PROJECT_DIR$/src/PizzaObjects/Slice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="120" column="39" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
+        <state relative-caret-position="330">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#1063#1064#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="e#1188#1189#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PizzaObjects/MaxSliceValidation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PizzaObjects/TotalIngredients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/ReadingWritingUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Slice#0;class#HashCodePracticeProblem#0" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#1377#1378#0" expanded="true" />
-            <element signature="e#1448#1449#0" expanded="true" />
-            <element signature="e#1502#1503#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="class#MaxSliceValidation#0;class#HashCodePracticeProblem#0" />
-            <element signature="class#TotalIngredients#0;class#HashCodePracticeProblem#0" />
-            <element signature="method#isValidMinIngredientsSlice#0;class#HashCodePracticeProblem#0" />
-            <element signature="method#isValidMaxSlice#0;class#HashCodePracticeProblem#0" />
-            <element signature="method#constructPizzaMatrix#0;class#HashCodePracticeProblem#0" />
-            <element signature="method#doSlicesOverlap#0;class#HashCodePracticeProblem#0" />
-            <element signature="method#approximateIndex#0;class#HashCodePracticeProblem#0" />
-            <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#HashCodePracticeProblem#0" />
-            <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#1;class#HashCodePracticeProblem#0" />
-            <element signature="method#writeAnswerToTheFile#0;class#HashCodePracticeProblem#0" />
+            <element signature="method#constructPizzaMatrix#0;class#ReadingWritingUtils#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/ChecksUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#isValidMinIngredientsSlice#0;class#ChecksUtils#0" />
+            <element signature="method#doSlicesOverlap#0;class#ChecksUtils#0" />
+            <element signature="method#approximateIndex#0;class#ChecksUtils#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="254" column="10" selection-start-line="254" selection-start-column="10" selection-end-line="254" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
+            <element signature="method#constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
+            <element signature="method#constructColumnOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
+            <element signature="method#selectValidSlices#0;class#AlgorithmsUtils#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashCodePracticeProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
