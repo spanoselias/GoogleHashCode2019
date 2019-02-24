@@ -22,7 +22,7 @@ public final class Main {
 
         // Read input file.
         final List<String> lines =
-                Files.readAllLines(Paths.get("DataSets/d_big.in"), StandardCharsets.UTF_8);
+                Files.readAllLines(Paths.get("DataSets/c_medium.in"), StandardCharsets.UTF_8);
 
         // Read values
         final String[] initialValues = lines.get(0).split(" ");
@@ -33,7 +33,6 @@ public final class Main {
 
         lines.remove(0);
         final char[][] tastyPizza = constructPizzaMatrix(lines, totalRows, totalColumns);
-
 
         final Set<SliceRowLocation> allSlicesRowOrientedLocationFormat =
                 AlgorithmsUtils.constructRowOrientedOverlapFreeSlicesFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
