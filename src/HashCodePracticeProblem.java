@@ -18,7 +18,7 @@ public final class HashCodePracticeProblem {
 
         // Read input file.
         final List<String> lines =
-                Files.readAllLines(Paths.get("d_big.in"), StandardCharsets.UTF_8);
+                Files.readAllLines(Paths.get("DataSets/d_big.in"), StandardCharsets.UTF_8);
 
         // Read values
         final String[] initialValues = lines.get(0).split(" ");

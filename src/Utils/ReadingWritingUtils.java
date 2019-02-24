@@ -34,9 +34,8 @@ public class ReadingWritingUtils {
         results.forEach(x ->
                 resultStr.append(x.toString()).append(sNewLine));
 
-        Files.write(Paths.get("output.txt"), resultStr.toString().getBytes());
+        Files.write(Paths.get("Results/output.txt"), resultStr.toString().getBytes());
     }
-
 
     private final static String sNewLine = "\n";
 
