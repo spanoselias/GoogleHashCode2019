@@ -196,54 +196,6 @@ public final class HashCodePracticeProblem {
         return randomNum;
     }
 
-    private static Set<Slice> constructOptimalSlicesFromPizzaMatrix(int maxRow, int maxColumn, final int minIngredients, final int maxCells, char[][] tastyPizza) {
-
-
-        System.out.println("Starting the construction of slices...");
-
-        final Set<Slice> allSlices = new HashSet<>(100000);
-
-        long cnt = 0;
-
-        for (int i = 0; i < maxRow; i++) {
-            for (int j = 0; j < maxRow; j++) {
-                for (int g = 0; g < maxColumn; g++) {
-                    for (int h = 0; h < maxColumn; h++) {
-
-                        if (i > j || g > h)
-                            continue;
-
-                        ++cnt;
-
-                        final Slice newSlice = Slice.create(i, j, g, h);
-
-                        final boolean isValidMaxSlice = isValidMaxSlice(i, g, j, h, maxCells).getIsMaxSliceValid();
-                        final boolean isValidMinIngrdients = isValidMinIngredientsSlice(i, g, j, h, minIngredients, tastyPizza);
-
-                        if (isValidMaxSlice && isValidMinIngrdients) {
-                            allSlices.add(newSlice);
-
-                        }
-
-                        if (cnt >= 8000000) {
-                            System.out.println("Finished the construction of slices...");
-
-                            return allSlices;
-                        }
-
-//                       System.out.println(i + "," +  j + "," + g + "," + h);
-
-//                        if (cnt >= 8000000)
-//                            return allSlices;
-
-                    }
-                }
-            }
-        }
-
-        return allSlices;
-    }
-
     private static Set<Slice> constructRowOrientedOverlapFreeSlicesFromPizzaMatrix(int maxRow, int maxColumn, final int minIngredients, final int maxCells, char[][] tastyPizza) {
 
         System.out.println("Starting the construction of slices...");
@@ -412,31 +364,10 @@ public final class HashCodePracticeProblem {
 
         final Set<Slice> slicesSet = new HashSet<>(100000);
 
-        allSlices.forEach(slice -> {
-
-//            if (hasOverlapList.size() > 1) {
-//                    System.out.println("More than once slices overlap: " + hasOverlapList.size());
-//            }
-
-//                if (hasOverlap.isPresent()) {
-//                    int shouldReplace = sRandom.nextInt(10) % 2;
-//
-//                    if (shouldReplace == 1) {
-//                        slicesSet.remove(slice);
-//                        slicesSet.add(hasOverlap.get());
-//                    }
-//                }
-
-//            if (hasOverlapList.isEmpty()) {
-            slicesSet.add(slice);
-//            }
-//            }
-        });
+        slicesSet.addAll(allSlices);
 
         System.out.println("Finished the selection of valid pizza cells.");
 
-
-        // final List<String> combinationList = combinations(pizzaLosToros);
         return slicesSet;
     }
 
@@ -472,8 +403,6 @@ public final class HashCodePracticeProblem {
         final Set<Slice> res = selectValidSlices(tastyPizza, allSlices, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice);
 
         writeAnswerToTheFile(res);
-
-//      System.out.println("Eating pizza!");
 
     }
 
