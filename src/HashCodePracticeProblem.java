@@ -325,6 +325,87 @@ public final class HashCodePracticeProblem {
 
     }
 
+    private static Set<Slice> constructColumnOrientedOverlapFreeSlicesFromPizzaMatrix(int maxRow, int maxColumn, final int minIngredients, final int maxCells, char[][] tastyPizza) {
+
+        System.out.println("Starting the construction of slices...");
+
+        final Set<Slice> allSlices = new HashSet<>(100000);
+
+        long cnt = 0;
+
+        int slicingStep = 11;
+
+        int i = 0;
+        int j = slicingStep;
+        int g = 0;
+        int h = 0;
+        boolean wasFoundValidSlice = false;
+
+        while (true) {
+
+//            if (i > j || g > h)
+//                continue;
+
+            ++cnt;
+
+            final Slice newSlice = Slice.create(i, j, g, h);
+
+            final boolean isValidMaxSlice = isValidMaxSlice(i, g, j, h, maxCells).getIsMaxSliceValid();
+            final boolean isValidMinIngrdients = isValidMinIngredientsSlice(i, g, j, h, minIngredients, tastyPizza);
+
+            if (isValidMaxSlice && isValidMinIngrdients) {
+                allSlices.add(newSlice);
+
+                wasFoundValidSlice = !wasFoundValidSlice;
+
+                if (j >= maxRow || j + slicingStep + 1 >= maxRow) {
+                    i += 1;
+                    j = i;
+                    g = 0;
+                    h = slicingStep;
+                } else {
+
+                    g += slicingStep + 1;
+                    h += slicingStep + 1;
+
+                }
+            }
+
+            // We reach the end of the file.
+            if (i + 1 >= maxRow) {
+                break;
+            }
+
+            if (((h + 1) >= maxColumn - 1)) {
+                i += 1;
+                j = i;
+                g = 0;
+                h = slicingStep;
+            } else {
+                if (wasFoundValidSlice == false) {
+                    g += 1;
+                    h += 1;
+                }
+            }
+
+            wasFoundValidSlice = false;
+
+            if (cnt % 100000 == 0) {
+                System.out.println("New Counter: " + cnt);
+            }
+
+//            if (cnt >= 6128) {
+//                System.out.println("Finished the construction of slices...");
+//
+//                return allSlices;
+//            }
+
+        }
+
+        return allSlices;
+
+    }
+
     private static Set<Slice> selectValidSlices(final char[][] pizzaLosToros, final Set<Slice> allSlices, final int minIngredients, final int maxCells) {
 
         System.out.println("Starting the selection of valid pizza cells.");
@@ -396,7 +477,6 @@ public final class HashCodePracticeProblem {
 
     }
 
-    private final static Random sRandom = new Random(System.currentTimeMillis());
     private final static String sNewLine = "\n";
 
 }
