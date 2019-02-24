@@ -120,21 +120,20 @@ public final class HashCodePracticeProblem {
             final int minIngredients,
             final char[][] tastyPizza) {
 
-        int cntTotalMashroom = 0;
-        int cntTotalTomatos = 0;
+        int cntMashroom = 0;
+        int cntTomatos = 0;
 
         for (int i = rowIdx1; i <= rowIdx2; i++) {
             for (int j = colIdx1; j <= colIdx2; j++) {
 
                 if (tastyPizza[i][j] == 'M')
-                    cntTotalMashroom += 1;
+                    cntMashroom += 1;
                 else
-                    cntTotalTomatos += 1;
-
+                    cntTomatos += 1;
             }
         }
 
-        return cntTotalMashroom >= minIngredients && cntTotalTomatos >= minIngredients;
+        return cntMashroom >= minIngredients && cntTomatos >= minIngredients;
     }
 
     private static MaxSliceValidation isValidMaxSlice(

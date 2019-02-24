@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HashCodePracticeProblem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="340" column="18" lean-forward="true" selection-start-line="340" selection-start-column="18" selection-end-line="340" selection-end-column="18" />
+            <state relative-caret-position="242">
+              <caret line="120" column="39" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#Slice#0;class#HashCodePracticeProblem#0" />
@@ -39,13 +39,13 @@
                 <element signature="e#1580#1581#0" expanded="true" />
                 <element signature="class#MaxSliceValidation#0;class#HashCodePracticeProblem#0" />
                 <element signature="class#TotalIngredients#0;class#HashCodePracticeProblem#0" />
+                <element signature="method#isValidMinIngredientsSlice#0;class#HashCodePracticeProblem#0" />
                 <element signature="method#isValidMaxSlice#0;class#HashCodePracticeProblem#0" />
                 <element signature="method#constructPizzaMatrix#0;class#HashCodePracticeProblem#0" />
                 <element signature="method#doSlicesOverlap#0;class#HashCodePracticeProblem#0" />
                 <element signature="method#approximateIndex#0;class#HashCodePracticeProblem#0" />
-                <element signature="method#constructOverlapFreeSlicesFromPizzaMatrix#0;class#HashCodePracticeProblem#0" />
                 <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#HashCodePracticeProblem#0" />
-                <element signature="method#selectValidSlices#0;class#HashCodePracticeProblem#0" />
+                <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#1;class#HashCodePracticeProblem#0" />
                 <element signature="method#writeAnswerToTheFile#0;class#HashCodePracticeProblem#0" />
               </folding>
             </state>
@@ -154,7 +154,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550999431490" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551000000630" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -224,7 +224,7 @@
       <workItem from="1550849783221" duration="24248000" />
       <workItem from="1550936718924" duration="363000" />
       <workItem from="1550945154122" duration="9644000" />
-      <workItem from="1550992830525" duration="6451000" />
+      <workItem from="1550992830525" duration="7060000" />
     </task>
     <task id="LOCAL-00001" summary="1) Implement functions">
       <created>1550781850329</created>
@@ -303,11 +303,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550997871878</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="1) Clean the code.">
+      <created>1550999608646</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1550999608646</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47662000" />
+    <option name="totallyTimeSpent" value="48271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -322,7 +329,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21018419" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16359697" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28602383" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -350,62 +357,44 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1) Implement functions" />
     <MESSAGE value="1) Optimised code." />
-    <MESSAGE value="1) Clean the code." />
     <MESSAGE value="1) Simplify code." />
     <MESSAGE value="1) Optimising code." />
     <MESSAGE value="1) Speed-up code." />
     <MESSAGE value="1) Working version." />
-    <option name="LAST_COMMIT_MESSAGE" value="1) Working version." />
+    <MESSAGE value="1) Clean the code." />
+    <option name="LAST_COMMIT_MESSAGE" value="1) Clean the code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>143</line>
+          <line>142</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>475</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>471</line>
+          <line>401</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>156</line>
+          <line>155</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>416</line>
-          <properties />
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>410</line>
+          <line>361</line>
           <properties />
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>429</line>
-          <properties />
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <condition expression="cnt == 6127" language="JAVA" />
           <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>269</line>
+          <line>220</line>
           <properties />
           <option name="timeStamp" value="120" />
         </line-breakpoint>
@@ -554,8 +543,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HashCodePracticeProblem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="340" column="18" lean-forward="true" selection-start-line="340" selection-start-column="18" selection-end-line="340" selection-end-column="18" />
+        <state relative-caret-position="242">
+          <caret line="120" column="39" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#Slice#0;class#HashCodePracticeProblem#0" />
@@ -573,13 +562,13 @@
             <element signature="e#1580#1581#0" expanded="true" />
             <element signature="class#MaxSliceValidation#0;class#HashCodePracticeProblem#0" />
             <element signature="class#TotalIngredients#0;class#HashCodePracticeProblem#0" />
+            <element signature="method#isValidMinIngredientsSlice#0;class#HashCodePracticeProblem#0" />
             <element signature="method#isValidMaxSlice#0;class#HashCodePracticeProblem#0" />
             <element signature="method#constructPizzaMatrix#0;class#HashCodePracticeProblem#0" />
             <element signature="method#doSlicesOverlap#0;class#HashCodePracticeProblem#0" />
             <element signature="method#approximateIndex#0;class#HashCodePracticeProblem#0" />
-            <element signature="method#constructOverlapFreeSlicesFromPizzaMatrix#0;class#HashCodePracticeProblem#0" />
             <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#HashCodePracticeProblem#0" />
-            <element signature="method#selectValidSlices#0;class#HashCodePracticeProblem#0" />
+            <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#1;class#HashCodePracticeProblem#0" />
             <element signature="method#writeAnswerToTheFile#0;class#HashCodePracticeProblem#0" />
           </folding>
         </state>
