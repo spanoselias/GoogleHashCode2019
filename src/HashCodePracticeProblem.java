@@ -252,7 +252,7 @@ public final class HashCodePracticeProblem {
 
         long cnt = 0;
 
-        int slicingStep = 13;
+        int slicingStep = 11;
 
         int i = 0;
         int j = 0;
@@ -374,7 +374,7 @@ public final class HashCodePracticeProblem {
 
         // Read input file.
         final List<String> lines =
-                Files.readAllLines(Paths.get("d_big.in"), StandardCharsets.UTF_8);
+                Files.readAllLines(Paths.get("c_medium.in"), StandardCharsets.UTF_8);
 
         // Read values
         final String[] initialValues = lines.get(0).split(" ");
