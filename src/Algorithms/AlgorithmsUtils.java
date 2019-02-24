@@ -3,17 +3,18 @@ package Algorithms;
 import static Utils.ChecksUtils.isValidMaxSlice;
 import static Utils.ChecksUtils.isValidMinIngredientsSlice;
 import PizzaObjects.Slice;
+import PizzaObjects.SliceRowLocation;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class AlgorithmsUtils {
 
-    public static Set<Slice> constructRowOrientedOverlapFreeSlicesFromPizzaMatrix(int maxRow, int maxColumn, final int minIngredients, final int maxCells, char[][] tastyPizza) {
+    public static Set<SliceRowLocation> constructRowOrientedOverlapFreeSlicesFromPizzaMatrix(int maxRow, int maxColumn, final int minIngredients, final int maxCells, char[][] tastyPizza) {
 
         System.out.println("Starting the construction of slices...");
 
-        final Set<Slice> allSlices = new HashSet<>(100000);
+        final Set<SliceRowLocation> allSlices = new HashSet<>(100000);
 
         long cnt = 0;
 
@@ -32,7 +33,7 @@ public class AlgorithmsUtils {
 
             ++cnt;
 
-            final Slice newSlice = Slice.create(i, j, g, h);
+            final SliceRowLocation newSlice = SliceRowLocation.create(i, Slice.create(i, j, g, h));
 
             final boolean isValidMaxSlice = isValidMaxSlice(i, g, j, h, maxCells).getIsMaxSliceValid();
             final boolean isValidMinIngrdients = isValidMinIngredientsSlice(i, g, j, h, minIngredients, tastyPizza);

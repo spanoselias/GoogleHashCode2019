@@ -1,5 +1,6 @@
 package Solution;
 
+import static Algorithms.ProcessingUtils.processorForIncreasingRowScore;
 import static Utils.ReadingWritingUtils.constructPizzaMatrix;
 import static Utils.ReadingWritingUtils.writeAnswerToTheFile;
 import PizzaObjects.Slice;
@@ -9,18 +10,19 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
 import Algorithms.*;
+import PizzaObjects.SliceRowLocation;
 
-public final class HashCodePracticeProblem {
+public final class Main {
 
     public static void main(String[] args) throws IOException {
 
         // Read input file.
         final List<String> lines =
-                Files.readAllLines(Paths.get("DataSets/d_big.in"), StandardCharsets.UTF_8);
+                Files.readAllLines(Paths.get("DataSets/d_medium.in"), StandardCharsets.UTF_8);
 
         // Read values
         final String[] initialValues = lines.get(0).split(" ");
@@ -32,7 +34,14 @@ public final class HashCodePracticeProblem {
         lines.remove(0);
         final char[][] tastyPizza = constructPizzaMatrix(lines, totalRows, totalColumns);
 
-        final Set<Slice> allSlicesRowOriented = AlgorithmsUtils.constructRowOrientedOverlapFreeSlicesFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
+
+        final Set<SliceRowLocation> allSlicesRowOrientedLocationFormat =
+                AlgorithmsUtils.constructRowOrientedOverlapFreeSlicesFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
+
+        final Set<Slice> allSlicesRowOriented =
+                allSlicesRowOrientedLocationFormat
+                        .stream().map(SliceRowLocation::getSlice)
+                        .collect(Collectors.toSet());
 
         final Set<Slice> allSlicesSquareOriented = AlgorithmsUtils.constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
 
@@ -42,9 +51,10 @@ public final class HashCodePracticeProblem {
                         .max(Comparator.comparing(Set::size))
                         .get();
 
+        processorForIncreasingRowScore(allSlicesRowOrientedLocationFormat, totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
+
         writeAnswerToTheFile(highestResults);
 
     }
-
 
 }
