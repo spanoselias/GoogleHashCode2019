@@ -1,3 +1,5 @@
+package Solution;
+
 import static Utils.ReadingWritingUtils.constructPizzaMatrix;
 import static Utils.ReadingWritingUtils.writeAnswerToTheFile;
 import PizzaObjects.Slice;
