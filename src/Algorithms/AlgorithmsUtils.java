@@ -17,7 +17,7 @@ public class AlgorithmsUtils {
 
         long cnt = 0;
 
-        int slicingStep = 11;
+        int slicingStep = 13;
 
         int i = 0;
         int j = 0;
@@ -98,10 +98,10 @@ public class AlgorithmsUtils {
 
         long cnt = 0;
 
-        int slicingStep = 11;
+        int slicingStep = 6;
 
         int i = 0;
-        int j = 0;
+        int j = 1;
         int g = 0;
         int h = slicingStep;
         boolean wasFoundValidSlice = false;
@@ -125,7 +125,7 @@ public class AlgorithmsUtils {
 
                 if (h >= maxColumn || h + slicingStep + 1 >= maxColumn) {
                     i += 1;
-                    j = i;
+                    j = i + 1;
                     g = 0;
                     h = slicingStep;
                 } else {
@@ -154,16 +154,6 @@ public class AlgorithmsUtils {
             }
 
             wasFoundValidSlice = false;
-
-            if (cnt % 100000 == 0) {
-                System.out.println("New Counter: " + cnt);
-            }
-
-//            if (cnt >= 6128) {
-//                System.out.println("Finished the construction of slices...");
-//
-//                return allSlices;
-//            }
 
         }
 

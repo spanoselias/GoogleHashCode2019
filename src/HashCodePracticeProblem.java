@@ -7,18 +7,18 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Stream;
 
 
 import Algorithms.*;
 
 public final class HashCodePracticeProblem {
 
-
     public static void main(String[] args) throws IOException {
 
         // Read input file.
         final List<String> lines =
-                Files.readAllLines(Paths.get("c_medium.in"), StandardCharsets.UTF_8);
+                Files.readAllLines(Paths.get("d_big.in"), StandardCharsets.UTF_8);
 
         // Read values
         final String[] initialValues = lines.get(0).split(" ");
@@ -30,11 +30,17 @@ public final class HashCodePracticeProblem {
         lines.remove(0);
         final char[][] tastyPizza = constructPizzaMatrix(lines, totalRows, totalColumns);
 
-        final Set<Slice> allSlices = AlgorithmsUtils.constructRowOrientedOverlapFreeSlicesFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
+        final Set<Slice> allSlicesRowOriented = AlgorithmsUtils.constructRowOrientedOverlapFreeSlicesFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
 
-        final Set<Slice> res = AlgorithmsUtils.selectValidSlices(tastyPizza, allSlices, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice);
+        final Set<Slice> allSlicesSquareOriented = AlgorithmsUtils.constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
 
-        writeAnswerToTheFile(res);
+        // We choose the approach with the highest score.
+        final Set<Slice> highestResults =
+                Stream.of(allSlicesRowOriented, allSlicesSquareOriented)
+                        .max(Comparator.comparing(Set::size))
+                        .get();
+
+        writeAnswerToTheFile(highestResults);
 
     }
 

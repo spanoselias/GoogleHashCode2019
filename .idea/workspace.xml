@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32d8415b-24e6-45af-846e-2ac933b8de56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PizzaObjects/MaxSliceValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PizzaObjects/Slice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PizzaObjects/TotalIngredients.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/ChecksUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/ReadingWritingUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HashCodePracticeProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashCodePracticeProblem.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,7 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HashCodePracticeProblem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="418">
+              <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,12 +30,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="254" column="10" selection-start-line="254" selection-start-column="10" selection-end-line="254" selection-end-column="10" />
+            <state relative-caret-position="198">
+              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
-                <element signature="method#constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
                 <element signature="method#constructColumnOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
                 <element signature="method#selectValidSlices#0;class#AlgorithmsUtils#0" />
               </folding>
@@ -63,10 +57,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/d_big.in">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PizzaObjects/TotalIngredients.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#264#265#0" expanded="true" />
                 <element signature="e#310#311#0" expanded="true" />
@@ -90,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/src/PizzaObjects/Slice.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#201#202#0" expanded="true" />
                 <element signature="e#237#238#0" expanded="true" />
@@ -119,15 +122,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="4" selection-start-column="4" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c_medium.in">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -210,18 +204,6 @@
               <item name="GoogleHashCode2019" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="GoogleHashCode2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoogleHashCode2019" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="PizzaObjects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoogleHashCode2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoogleHashCode2019" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -231,7 +213,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551032549316" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551033253435" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -302,7 +284,7 @@
       <workItem from="1550936718924" duration="363000" />
       <workItem from="1550945154122" duration="9644000" />
       <workItem from="1550992830525" duration="8282000" />
-      <workItem from="1551031724664" duration="820000" />
+      <workItem from="1551031724664" duration="1525000" />
     </task>
     <task id="LOCAL-00001" summary="1) Implement functions">
       <created>1550781850329</created>
@@ -395,17 +377,24 @@
       <option name="project" value="LOCAL" />
       <updated>1551000012277</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="1) Refactor project structure.">
+      <created>1551032575887</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1551032575888</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50313000" />
+    <option name="totallyTimeSpent" value="51018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13059701" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13059701" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -415,7 +404,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.26868907" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.28602383" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2990249" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -447,17 +436,12 @@
     <MESSAGE value="1) Speed-up code." />
     <MESSAGE value="1) Working version." />
     <MESSAGE value="1) Clean the code." />
-    <option name="LAST_COMMIT_MESSAGE" value="1) Clean the code." />
+    <MESSAGE value="1) Refactor project structure." />
+    <option name="LAST_COMMIT_MESSAGE" value="1) Refactor project structure." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="cnt == 6127" language="JAVA" />
           <url>file://$PROJECT_DIR$/src/HashCodePracticeProblem.java</url>
@@ -584,34 +568,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/d_big.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c_medium.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/b_small.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PizzaObjects/Slice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#201#202#0" expanded="true" />
             <element signature="e#237#238#0" expanded="true" />
@@ -639,7 +602,7 @@
     <entry file="file://$PROJECT_DIR$/src/PizzaObjects/TotalIngredients.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#264#265#0" expanded="true" />
             <element signature="e#310#311#0" expanded="true" />
@@ -660,6 +623,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/c_medium.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/b_small.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d_big.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/ChecksUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
@@ -675,12 +659,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="254" column="10" selection-start-line="254" selection-start-column="10" selection-end-line="254" selection-end-column="10" />
+        <state relative-caret-position="198">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
-            <element signature="method#constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
             <element signature="method#constructColumnOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
             <element signature="method#selectValidSlices#0;class#AlgorithmsUtils#0" />
           </folding>
@@ -689,7 +671,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HashCodePracticeProblem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="418">
+          <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
