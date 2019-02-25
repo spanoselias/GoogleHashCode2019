@@ -42,7 +42,8 @@ public final class Main {
                         .stream().map(SliceRowLocation::getSlice)
                         .collect(Collectors.toSet());
 
-        final Set<Slice> allSlicesSquareOriented = AlgorithmsUtils.constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
+        final Set<Slice> allSlicesSquareOriented =
+                AlgorithmsUtils.constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
 
         // We improve accuracy
         final Set<Slice> allSlicesRowOrientedOptimised1 =
