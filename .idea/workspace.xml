@@ -7,8 +7,6 @@
     <list default="true" id="32d8415b-24e6-45af-846e-2ac933b8de56" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorithms/PostProcessingUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/PostProcessingUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,13 +76,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
+            <state relative-caret-position="474">
+              <caret line="154" selection-start-line="154" selection-end-line="154" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
-                <element signature="method#constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
-                <element signature="method#constructColumnOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
                 <element signature="method#selectValidSlices#0;class#AlgorithmsUtils#0" />
               </folding>
             </state>
@@ -155,8 +150,8 @@
         <option value="$PROJECT_DIR$/src/Algorithms/ProcessingUtils.java" />
         <option value="$PROJECT_DIR$/src/PizzaObjects/GenericDataStructures.java" />
         <option value="$PROJECT_DIR$/src/Algorithms/PostProcessingUtils.java" />
-        <option value="$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java" />
         <option value="$PROJECT_DIR$/src/Solution/Main.java" />
+        <option value="$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java" />
       </list>
     </option>
   </component>
@@ -219,7 +214,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551115595246" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551116325868" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -293,7 +288,7 @@
       <workItem from="1550936718924" duration="363000" />
       <workItem from="1550945154122" duration="9644000" />
       <workItem from="1550992830525" duration="8282000" />
-      <workItem from="1551031724664" duration="22950000" />
+      <workItem from="1551031724664" duration="23602000" />
     </task>
     <task id="LOCAL-00001" summary="1) Implement functions">
       <created>1550781850329</created>
@@ -449,11 +444,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551114273589</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="1) Speed-up processing.">
+      <created>1551115679910</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1551115679910</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72443000" />
+    <option name="totallyTimeSpent" value="73095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -469,8 +471,8 @@
       <window_info anchor="bottom" id="Duplicate detector" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18959913" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.14734562" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.10617551" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.25135428" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -554,9 +556,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java</url>
-          <line>96</line>
+          <line>90</line>
           <properties />
           <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="162" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -789,13 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Results/output.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithms/PostProcessingUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -816,15 +823,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Results/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
+        <state relative-caret-position="474">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#constructRowOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
-            <element signature="method#constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
-            <element signature="method#constructColumnOrientedOverlapFreeSlicesFromPizzaMatrix#0;class#AlgorithmsUtils#0" />
             <element signature="method#selectValidSlices#0;class#AlgorithmsUtils#0" />
           </folding>
         </state>
