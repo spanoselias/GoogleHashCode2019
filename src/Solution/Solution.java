@@ -15,13 +15,13 @@ import java.util.stream.Stream;
 import Algorithms.*;
 import PizzaObjects.SliceRowLocation;
 
-public final class Main {
+public final class Solution {
 
     public static void main(String[] args) throws IOException {
 
         // Read input file.
         final List<String> lines =
-                Files.readAllLines(Paths.get("DataSets/d_big.in"), StandardCharsets.UTF_8);
+                Files.readAllLines(Paths.get("DataSets/c_medium.in"), StandardCharsets.UTF_8);
 
         // Read values
         final String[] initialValues = lines.get(0).split(" ");
@@ -46,13 +46,17 @@ public final class Main {
         final Set<Slice> allSlicesSquareOriented =
                 AlgorithmsUtils.constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
 
+        // Slice pieces using square-oriented slider
+        final Set<Slice> allSlicesColumnOriented =
+                AlgorithmsUtils.constructColumnOrientedOverlapFreeSliderFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
+
         // We improve accuracy
         final Set<Slice> allSlicesRowOrientedOptimised1 =
                 PostProcessingUtils.postprocessorForIncreasingOverallScore(allSlicesRowOrientedLocationFormat, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
 
         // We choose the approach with the highest score.
         final Set<Slice> highestResults =
-                Stream.of(allSlicesRowOriented, allSlicesSquareOriented, allSlicesRowOrientedOptimised1)
+                Stream.of(allSlicesRowOriented, allSlicesSquareOriented, allSlicesRowOrientedOptimised1, allSlicesColumnOriented)
                         .max(Comparator.comparing(Set::size))
                         .get();
 

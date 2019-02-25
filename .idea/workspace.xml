@@ -7,6 +7,7 @@
     <list default="true" id="32d8415b-24e6-45af-846e-2ac933b8de56" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution/Solution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Solution/Main.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Solution/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="46" column="50" lean-forward="true" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+            <state relative-caret-position="537">
+              <caret line="57" column="41" lean-forward="true" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Algorithms/PostProcessingUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+            <state relative-caret-position="414">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,13 +45,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/ChecksUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
+            <state relative-caret-position="-141">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#doSlicesOverlap#0;class#ChecksUtils#0" />
                 <element signature="method#approximateIndex#0;class#ChecksUtils#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataSets/d_big.in">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="14" lean-forward="true" selection-start-column="12" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -73,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="154" selection-start-line="154" selection-end-line="154" />
+            <state relative-caret-position="328">
+              <caret line="137" selection-start-line="137" selection-end-line="137" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#selectValidSlices#0;class#AlgorithmsUtils#0" />
@@ -151,15 +161,16 @@
         <option value="$PROJECT_DIR$/src/PizzaObjects/GenericDataStructures.java" />
         <option value="$PROJECT_DIR$/src/Algorithms/PostProcessingUtils.java" />
         <option value="$PROJECT_DIR$/src/Solution/Main.java" />
+        <option value="$PROJECT_DIR$/src/Solution/Solution.java" />
         <option value="$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
-    <option name="y" value="-6" />
-    <option name="width" value="1293" />
-    <option name="height" value="705" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -205,6 +216,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Results" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GoogleHashCode2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoogleHashCode2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Solution" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -214,7 +231,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551116325868" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551118597188" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -241,11 +258,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Solution">
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-11.0.2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Solution.Main" />
+      <option name="MAIN_CLASS_NAME" value="Solution.Solution" />
       <module name="PizzaHashCode" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <method v="2">
@@ -262,12 +279,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Solution" />
       <item itemvalue="Application.TastyPizza" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.TastyPizza" />
       </list>
     </recent_temporary>
@@ -288,7 +305,7 @@
       <workItem from="1550936718924" duration="363000" />
       <workItem from="1550945154122" duration="9644000" />
       <workItem from="1550992830525" duration="8282000" />
-      <workItem from="1551031724664" duration="23602000" />
+      <workItem from="1551031724664" duration="26022000" />
     </task>
     <task id="LOCAL-00001" summary="1) Implement functions">
       <created>1550781850329</created>
@@ -451,11 +468,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551115679910</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="1) Simplify code.">
+      <created>1551116342550</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1551116342550</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73095000" />
+    <option name="totallyTimeSpent" value="75515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -471,8 +495,8 @@
       <window_info anchor="bottom" id="Duplicate detector" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.10617551" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.25135428" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15492958" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.08559047" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -499,7 +523,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1) Implement functions" />
     <MESSAGE value="1) Optimised code." />
-    <MESSAGE value="1) Simplify code." />
     <MESSAGE value="1) Optimising code." />
     <MESSAGE value="1) Speed-up code." />
     <MESSAGE value="1) Working version." />
@@ -512,14 +535,15 @@
     <MESSAGE value="1) Improve existing solution." />
     <MESSAGE value="1) Improve algorithm using post-processing." />
     <MESSAGE value="1) Speed-up processing." />
-    <option name="LAST_COMMIT_MESSAGE" value="1) Speed-up processing." />
+    <MESSAGE value="1) Simplify code." />
+    <option name="LAST_COMMIT_MESSAGE" value="1) Simplify code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="cnt == 6127" language="JAVA" />
-          <url>file://$PROJECT_DIR$/src/Solution/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/Solution/Solution.java</url>
           <line>16</line>
           <properties />
           <option name="timeStamp" value="120" />
@@ -531,8 +555,8 @@
           <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution/Main.java</url>
-          <line>53</line>
+          <url>file://$PROJECT_DIR$/src/Solution/Solution.java</url>
+          <line>57</line>
           <properties />
           <option name="timeStamp" value="143" />
         </line-breakpoint>
@@ -543,34 +567,22 @@
           <option name="timeStamp" value="144" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Algorithms/PostProcessingUtils.java</url>
-          <line>88</line>
-          <properties />
-          <option name="timeStamp" value="157" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution/Main.java</url>
-          <line>49</line>
+          <url>file://$PROJECT_DIR$/src/Solution/Solution.java</url>
+          <line>53</line>
           <properties />
           <option name="timeStamp" value="158" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java</url>
-          <line>90</line>
+          <url>file://$PROJECT_DIR$/src/Solution/Solution.java</url>
+          <line>39</line>
           <properties />
-          <option name="timeStamp" value="160" />
+          <option name="timeStamp" value="164" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java</url>
-          <line>36</line>
+          <url>file://$PROJECT_DIR$/src/Solution/Solution.java</url>
+          <line>45</line>
           <properties />
-          <option name="timeStamp" value="161" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java</url>
-          <line>37</line>
-          <properties />
-          <option name="timeStamp" value="162" />
+          <option name="timeStamp" value="165" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -760,13 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataSets/d_big.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" lean-forward="true" selection-start-column="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/ReadingWritingUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -793,7 +798,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/ChecksUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
+        <state relative-caret-position="-141">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -803,40 +808,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/PostProcessingUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/DataSets/d_big.in">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Solution/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="46" column="50" lean-forward="true" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret column="14" lean-forward="true" selection-start-column="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Results/output.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        <state relative-caret-position="22">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algorithms/AlgorithmsUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="328">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#selectValidSlices#0;class#AlgorithmsUtils#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/PostProcessingUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solution/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="57" column="41" lean-forward="true" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

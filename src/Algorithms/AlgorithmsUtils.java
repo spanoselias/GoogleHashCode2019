@@ -24,7 +24,7 @@ public class AlgorithmsUtils {
         int h = slicingStep;
         boolean wasFoundValidSlice = false;
 
-        while (i + 1 >= maxRow ) {
+        while (i + 1 <= maxRow ) {
 
             final SliceRowLocation newSlice =
                     SliceRowLocation.create(
@@ -80,8 +80,7 @@ public class AlgorithmsUtils {
         int h = slicingStep;
         boolean wasFoundValidSlice = false;
 
-        while (i + 1 >= maxRow) {
-
+        while (i + 1 <= maxRow) {
 
             final Slice newSlice = Slice.create(i, j, g, h);
 
@@ -119,13 +118,13 @@ public class AlgorithmsUtils {
 
     }
 
-    public static Set<Slice> constructColumnOrientedOverlapFreeSlicesFromPizzaMatrix(int maxRow, int maxColumn, final int minIngredients, final int maxCells, char[][] tastyPizza) {
+    public static Set<Slice> constructColumnOrientedOverlapFreeSliderFromPizzaMatrix(int maxRow, int maxColumn, final int minIngredients, final int maxCells, char[][] tastyPizza) {
 
         System.out.println("Starting the construction of slices...");
 
         final Set<Slice> allSlices = new HashSet<>(100000);
 
-        int slicingStep = 11;
+        int slicingStep = maxCells - 1;
 
         int i = 0;
         int j = slicingStep;
@@ -133,7 +132,7 @@ public class AlgorithmsUtils {
         int h = 0;
         boolean wasFoundValidSlice = false;
 
-        while (i + 1 >= maxRow) {
+        while (h + 1 < maxColumn) {
 
             final Slice newSlice = Slice.create(i, j, g, h);
 
@@ -146,25 +145,24 @@ public class AlgorithmsUtils {
                 wasFoundValidSlice = !wasFoundValidSlice;
 
                 // Ignore cell's slice for avoiding overlapping.
-                g += slicingStep + 1;
-                h += slicingStep + 1;
-                h = Math.min(maxColumn - 1, h);
+                i += slicingStep + 1;
+                j += slicingStep + 1;
+                j = Math.min(maxRow - 1, j);
             }
 
-            if ((h + 1) >= maxColumn - 1 && !wasFoundValidSlice) {
-                i += 1;
-                j = i;
-                g = 0;
-                h = slicingStep;
+            if ((j + 1) >= maxRow - 1 && !wasFoundValidSlice) {
+                i = 0;
+                j = slicingStep;
+                g += 1;
+                h = g;
             } else {
                 if (wasFoundValidSlice == false) {
-                    g += 1;
-                    h += 1;
+                    i += 1;
+                    j += 1;
                 }
             }
 
             wasFoundValidSlice = false;
-
         }
 
         return allSlices;
