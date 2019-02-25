@@ -1,6 +1,6 @@
 package Solution;
 
-import static Algorithms.ProcessingUtils.processorForIncreasingRowScore;
+import static Algorithms.PostProcessingUtils.*;
 import static Utils.ReadingWritingUtils.constructPizzaMatrix;
 import static Utils.ReadingWritingUtils.writeAnswerToTheFile;
 import PizzaObjects.Slice;
@@ -22,7 +22,7 @@ public final class Main {
 
         // Read input file.
         final List<String> lines =
-                Files.readAllLines(Paths.get("DataSets/c_medium.in"), StandardCharsets.UTF_8);
+                Files.readAllLines(Paths.get("DataSets/d_big.in"), StandardCharsets.UTF_8);
 
         // Read values
         final String[] initialValues = lines.get(0).split(" ");
@@ -44,13 +44,15 @@ public final class Main {
 
         final Set<Slice> allSlicesSquareOriented = AlgorithmsUtils.constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
 
+        // We improve accuracy
+        final Set<Slice> allSlicesRowOrientedOptimised1 =
+                PostProcessingUtils.processorForIncreasingRowScore(allSlicesRowOrientedLocationFormat, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
+
         // We choose the approach with the highest score.
         final Set<Slice> highestResults =
-                Stream.of(allSlicesRowOriented, allSlicesSquareOriented)
+                Stream.of(allSlicesRowOriented, allSlicesSquareOriented, allSlicesRowOrientedOptimised1)
                         .max(Comparator.comparing(Set::size))
                         .get();
-
-        processorForIncreasingRowScore(allSlicesRowOrientedLocationFormat, totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
 
         writeAnswerToTheFile(highestResults);
 
