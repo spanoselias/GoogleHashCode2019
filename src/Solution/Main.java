@@ -1,6 +1,5 @@
 package Solution;
 
-import static Algorithms.PostProcessingUtils.*;
 import static Utils.ReadingWritingUtils.constructPizzaMatrix;
 import static Utils.ReadingWritingUtils.writeAnswerToTheFile;
 import PizzaObjects.Slice;
@@ -35,19 +34,21 @@ public final class Main {
         final char[][] tastyPizza = constructPizzaMatrix(lines, totalRows, totalColumns);
 
         final Set<SliceRowLocation> allSlicesRowOrientedLocationFormat =
-                AlgorithmsUtils.constructRowOrientedOverlapFreeSlicesFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
+                AlgorithmsUtils.constructRowOrientedOverlapFreeSliderFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
 
+        // Slice pieces using row-oriented slider
         final Set<Slice> allSlicesRowOriented =
                 allSlicesRowOrientedLocationFormat
                         .stream().map(SliceRowLocation::getSlice)
                         .collect(Collectors.toSet());
 
+        // Slice pieces using square-oriented slider
         final Set<Slice> allSlicesSquareOriented =
                 AlgorithmsUtils.constructOptimisticSquareSliderOverlapFreeFromPizzaMatrix(totalRows, totalColumns, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
 
         // We improve accuracy
         final Set<Slice> allSlicesRowOrientedOptimised1 =
-                PostProcessingUtils.processorForIncreasingRowScore(allSlicesRowOrientedLocationFormat, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
+                PostProcessingUtils.postprocessorForIncreasingOverallScore(allSlicesRowOrientedLocationFormat, minIngridientCellsInSlice, maxTotalNoOfCellsOfSlice, tastyPizza);
 
         // We choose the approach with the highest score.
         final Set<Slice> highestResults =
@@ -56,7 +57,5 @@ public final class Main {
                         .get();
 
         writeAnswerToTheFile(highestResults);
-
     }
-
 }

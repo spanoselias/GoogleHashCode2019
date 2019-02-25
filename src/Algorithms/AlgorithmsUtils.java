@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class AlgorithmsUtils {
 
-    public static Set<SliceRowLocation> constructRowOrientedOverlapFreeSlicesFromPizzaMatrix(int maxRow, int maxColumn, final int minIngredients, final int maxCells, char[][] tastyPizza) {
+    public static Set<SliceRowLocation> constructRowOrientedOverlapFreeSliderFromPizzaMatrix(int maxRow, int maxColumn, final int minIngredients, final int maxCells, char[][] tastyPizza) {
 
         final Set<SliceRowLocation> allValidNonOverlappingSlices = new HashSet<>(80000);
 
@@ -78,8 +78,6 @@ public class AlgorithmsUtils {
 
         final Set<Slice> allSlices = new HashSet<>(100000);
 
-        long cnt = 0;
-
         int slicingStep = 6;
 
         int i = 0;
@@ -90,10 +88,6 @@ public class AlgorithmsUtils {
 
         while (true) {
 
-            if (i > j || g > h)
-                continue;
-
-            ++cnt;
 
             final Slice newSlice = Slice.create(i, j, g, h);
 
@@ -105,17 +99,10 @@ public class AlgorithmsUtils {
 
                 wasFoundValidSlice = !wasFoundValidSlice;
 
-                if (h >= maxColumn || h + slicingStep + 1 >= maxColumn) {
-                    i += 1;
-                    j = i + 1;
-                    g = 0;
-                    h = slicingStep;
-                } else {
-
-                    g += slicingStep + 1;
-                    h += slicingStep + 1;
-
-                }
+                // Ignore cell's slice for avoiding overlapping.
+                g += slicingStep + 1;
+                h += slicingStep + 1;
+                h = Math.min(maxColumn - 1, h);
             }
 
             // We reach the end of the file.
@@ -123,7 +110,7 @@ public class AlgorithmsUtils {
                 break;
             }
 
-            if (((h + 1) >= maxColumn - 1)) {
+            if ((h + 1) >= maxColumn - 1 && !wasFoundValidSlice) {
                 i += 1;
                 j = i;
                 g = 0;

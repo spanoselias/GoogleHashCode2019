@@ -56,7 +56,7 @@ public class PostProcessingUtils {
 
     }
 
-    public static Set<Slice> processorForIncreasingRowScore(
+    public static Set<Slice> postprocessorForIncreasingOverallScore(
             Set<SliceRowLocation> sliceRowLocationSet,
             final int minIngredients,
             final int maxCells,
